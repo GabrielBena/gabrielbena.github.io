@@ -1,12 +1,9 @@
 ---
-title: new test
-fileName: newTest
+title: another test
 tags:
-- tag
 categories:
-- category
 date: 2022-11-21
-lastMod: 
+lastMod: 2022-11-21
 ---
 link to #[git test]({{< ref "/pages/git test" >}})
 
