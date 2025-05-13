@@ -6,7 +6,6 @@ tags: distill formatting
 giscus_comments: true
 date: 2021-05-22
 featured: true
-published: true
 mermaid:
   enabled: true
   zoomable: true
