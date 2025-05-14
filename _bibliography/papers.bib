@@ -19,6 +19,81 @@
   url={https://www.nature.com/articles/s41467-024-55188-9},
   doi = {https://doi.org/10.1038/s41467-024-55188-9},
   tags = {Modularity, specialization, Resource-constrained},
-  preview={methods_fig_1.pdf}
+  preview={dynspec.png}
+}
 
+
+
+@article{bena_eventbased_2025,
+  bibtex_show={true},
+	title = {Event-based backpropagation on the neuromorphic platform {SpiNNaker}2},
+  journal={NICE 2025 Proceedings},
+	abstract = {Neuromorphic computing aims to replicate the brain's capabilities for energy efficient and parallel information processing, promising a solution to the increasing demand for faster and more efficient computational systems. Efficient training of neural networks on neuromorphic hardware requires the development of training algorithms that retain the sparsity of spike-based communication during training. Here, we report on the first implementation of event-based backpropagation on the {SpiNNaker}2 neuromorphic hardware platform. We use {EventProp}, an algorithm for event-based backpropagation in spiking neural networks ({SNNs}), to compute exact gradients using sparse communication of error signals between neurons. Our implementation computes multi-layer networks of leaky integrate-and-fire neurons using discretized versions of the differential equations and their adjoints, and uses event packets to transmit spikes and error signals between network layers. We demonstrate a proof-of-concept of batch-parallelized, on-chip training of {SNNs} using the Yin Yang dataset, and provide an off-chip implementation for efficient prototyping, hyper-parameter search, and hybrid training methods.},
+	author = {Béna, Gabriel and Wunderlich, Timo and Akl, Mahmoud and Vogginger, Bernhard and Mayr, Christian and Gonzalez, Hector Andres},
+  year={2025},
+  date={2025-03-19},
+  selected={true},
+  url={https://arxiv.org/abs/2412.15021v1},
+  doi = {https://doi.org/10.48550/arXiv.2412.15021},
+  tags = {Event-based backpropagation, SpiNNaker, Neuromorphic computing},
+  preview={s2logo.png},
+  eventtitle={Neuro Inspired Computational Elements Conference 2025}
+}
+
+@article{ghosh_nonlinear_2024,
+  bibtex_show={true},
+	title = {Nonlinear fusion is optimal for a wide class of multisensory tasks},
+	volume = {20},
+	rights = {Creative Commons Attribution-{NonCommercial}-{NoDerivatives} 4.0 International Licence ({CC}-{BY}-{NC}-{ND})},
+	issn = {1553-7358},
+	url = {https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012246},
+	doi = {10.1371/journal.pcbi.1012246},
+	abstract = {Animals continuously detect information via multiple sensory channels, like vision and hearing, and integrate these signals to realise faster and more accurate decisions; a fundamental neural computation known as multisensory integration. A widespread view of this process is that multimodal neurons linearly fuse information across sensory channels. However, does linear fusion generalise beyond the classical tasks used to explore multisensory integration? Here, we develop novel multisensory tasks, which focus on the underlying statistical relationships between channels, and deploy models at three levels of abstraction: from probabilistic ideal observers to artificial and spiking neural networks. Using these models, we demonstrate that when the information provided by different channels is not independent, linear fusion performs sub-optimally and even fails in extreme cases. This leads us to propose a simple nonlinear algorithm for multisensory integration which is compatible with our current knowledge of multimodal circuits, excels in naturalistic settings and is optimal for a wide class of multisensory tasks. Thus, our work emphasises the role of nonlinear fusion in multisensory integration, and provides testable hypotheses for the field to explore at multiple levels: from single neurons to behaviour.},
+  year={2024},
+	pages = {e1012246},
+	number = {7},
+	journal = {{PLOS} Computational Biology},
+	shortjournal = {{PLOS} Computational Biology},
+	author = {Ghosh, Marcus and Béna, Gabriel and Bormuth, Volker and Goodman, Dan F. M.},
+	urldate = {2024-09-10},
+	date = {2024-07-05},
+	langid = {english},
+	keywords = {Algorithms, Artificial neural networks, Behavior, Neural networks, Neurons, Predation, Sensory perception, Single neuron function},
+  preview={m2snn.png}
+}
+
+
+@inproceedings{andrei_deep-_2024,
+bibtex_show={true},
+	title = {Deep- Unrolling Multidimensional Harmonic Retrieval Algorithms on Neuromorphic Hardware},
+	rights = {All rights reserved},
+	url = {https://ieeexplore.ieee.org/abstract/document/10942794},
+	doi = {10.1109/IEEECONF60004.2024.10942794},
+	abstract = {This paper explores the potential of conversion-based neuromorphic algorithms for highly accurate and energy-efficient single-snapshot multidimensional harmonic retrieval ({MHR}). By casting the {MHR} problem as a sparse recovery problem, we devise the currently proposed, deep-unrolling-based Structured Learned Iterative Shrinkage and Thresholding (S-{LISTA}) algorithm to solve it efficiently using complex-valued convolutional neural networks with complex-valued activations, which are trained using a supervised regression objective. Afterward, a novel method for converting the complex-valued convolutional layers and activations into spiking neural networks ({SNNs}) is developed. At the heart of this method lies the recently proposed Few Spikes ({FS}) conversion, which is extended by modifying the neuron model's parameters and internal dynamics to account for the inherent coupling between real and imaginary parts in complex-valued computations. Finally, the converted {SNNs} are mapped onto the {SpiNNaker}2 neuromorphic board, and a comparison in terms of estimation accuracy and power efficiency between the original {CNNs} deployed on an {NVIDIA} Jetson Xavier and the {SNNs} is being conducted. The measurement results show that the converted {SNNs} achieve almost five-fold power efficiency at moderate performance loss compared to the original {CNNs}.},
+	eventtitle = {2024 58th Asilomar Conference on Signals, Systems, and Computers},
+	pages = {298--302},
+	booktitle = {2024 58th Asilomar Conference on Signals, Systems, and Computers},
+	author = {Andrei, Vlad C. and Drǎgutoiu, Alexandru P. and Béna, Gabriel and Akl, Mahmoud and Li, Yin and Lohrmann, Matthias and Mönich, Ullrich J. and Boche, Holger},
+	urldate = {2025-04-30},
+	year={2024},
+	date = {2024-10},
+	keywords = {Accuracy, Convolution, Convolutional neural networks, Harmonic analysis, Iterative algorithms, Loss measurement, Neuromorphics, Neurons, Power measurement, Spiking neural networks},
+  preview={s2logo.png}
+}
+
+
+@article{ghosh_spiking_2024,
+  bibtex_show={true},
+	title = {Spiking neural network models of sound localisation via a massively collaborative process},
+	copyright = {© 2024, Posted by Cold Spring Harbor Laboratory. This pre-print is available under a Creative Commons License (Attribution 4.0 International), CC BY 4.0, as described at http://creativecommons.org/licenses/by/4.0/},
+	url = {https://www.biorxiv.org/content/10.1101/2024.07.19.604252v1},
+	doi = {10.1101/2024.07.19.604252},
+	abstract = {Neuroscientists are increasingly initiating large-scale collaborations which bring together tens to hundreds of researchers. However, while these projects represent a step-change in scale, they retain a traditional structure with centralised funding, participating laboratories and data sharing on publication. Inspired by an open-source project in pure mathematics, we set out to test the feasibility of an alternative structure by running a grassroots, massively collaborative project in computational neuroscience. To do so, we launched a public Git repository, with code for training spiking neural networks to solve a sound localisation task via surrogate gradient descent. We then invited anyone, anywhere to use this code as a springboard for exploring questions of interest to them, and encouraged participants to share their work both asynchro-nously through Git and synchronously at monthly online workshops. At a scientific level, our work investigated how a range of biologically-relevant parameters, from time delays to mem-brane time constants and levels of inhibition, could impact sound localisation in networks of spiking units. At a more macro-level, our project brought together 31 researchers from multiple countries, provided hands-on research experience to early career participants, and opportunities for supervision and teaching to later career participants. Looking ahead, our project provides a glimpse of what open, collaborative science could look like and provides a necessary, tentative step towards it.},
+	language = {en},
+	urldate = {2025-05-14},
+	publisher = {bioRxiv},
+	author = {Ghosh, Marcus and Habashy, Karim G. and Santis, Francesco De and Fiers, Tomas and Erçelik, Dilay Fidan and Mészáros, Balázs and Friedenberger, Zachary and Béna, Gabriel and Hong, Mingxuan and Abubacar, Umar and Byrne, Rory T. and Riquelme, Juan Luis and Liu, Yuhan Helena and Aizenbud, Ido and Bicknell, Brendan A. and Bormuth, Volker and Antonietti, Alberto and Goodman, Dan F. M.},
+	month = jul,
+	year = {2024},
+  preview={comob.png}
 }
