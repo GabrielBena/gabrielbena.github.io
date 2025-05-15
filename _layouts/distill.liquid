@@ -34,15 +34,6 @@
               }{% if forloop.last == false %},{% endif %}
               {% endfor %}
             ],
-            "slug": "{{ page.slug }}",
-            "journal": "{{ page.journal }}",
-            "volume": "{{ page.volume }}",
-            "issue": "{{ page.issue }}",
-            "doi": "{{ page.doi }}",
-            "url": "{{ page.url }}",
-            "github": "{{ page.github }}",
-            "acknowledgements": "{{ page.acknowledgements }}",
-            "author_contributions": "{{ page.author_contributions }}",
             "katex": {
               "delimiters": [
                 {
@@ -99,8 +90,6 @@
         {% endif %}
         {{ content }}
       </d-article>
-
-      <distill-appendix></distill-appendix>
 
       <d-appendix>
         <d-footnote-list></d-footnote-list>
