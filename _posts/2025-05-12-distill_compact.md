@@ -58,7 +58,7 @@ toc:
 Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives — such as matrix multiplication and transposition — culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/grant_task_evolution.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -99,7 +99,7 @@ Our framework demonstrates neural cellular automata's capability to act as a gen
 This separation enables a two-level optimization: at the global level, we train a general-purpose NCA rule to support diverse operations, while at the task-specific level, we optimize hardware configurations. The system adapts its dynamics using the local available hardware, similar to how different components on a motherboard enable different functions.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/architecture.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -127,7 +127,7 @@ We explored two approaches for designing specialized hardware configurations:
 Our initial implementation used task-specific parameters with the same spatial dimension as the computational state. While successful and visually interpretable, this approach lacks generalizability across different spatial configurations and matrix sizes.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/monolithic_hw.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -146,7 +146,7 @@ To address these limitations, we developed a modular approach with three purpose
 These components are assembled for each task instance, balancing the scale-free nature of NCAs with the need for specialized hardware. This approach enables zero-shot generalization to unseen task configurations and composite task chaining.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/modular_hw.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -183,7 +183,7 @@ Parameters for the shared NCA rule and shared hardware components are updated ba
 Our Neural Cellular Automata successfully mastered various matrix operations simultaneously through a shared update rule architecture with task-specific hardware components. This demonstrates that a single NCA can develop general computational principles that apply across different matrix tasks.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/gifs/Translation.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -192,7 +192,7 @@ Our Neural Cellular Automata successfully mastered various matrix operations sim
 </div>
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/gifs/Rotation.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -201,7 +201,7 @@ Our Neural Cellular Automata successfully mastered various matrix operations sim
 </div>
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/gifs/Multiplication.gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -222,7 +222,7 @@ We demonstrated a practical application by using our NCA to emulate a neural net
 First, we pre-trained a simple linear network to classify MNIST digits with sufficient accuracy. Our NCA model was pre-trained on smaller 8×8 matrix multiplication tasks. Since MNIST classification requires larger matrices (784×10), we implemented block-matrix decomposition, fragmenting the classification into multiple smaller operations that fit within the NCA's constraints.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/mnist.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -239,7 +239,7 @@ This has significant implications for analog and physical computing. If our NCA'
 The modular hardware approach enables the creation of out-of-distribution tasks through component composition. We can design novel computational scenarios that the NCA wasn't explicitly trained on, such as duplicating a central matrix into multiple corners.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/OOD.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -253,7 +253,7 @@ This framework opens the path toward complex composite tasks created through seq
 3. Update the hardware again to rotate the resulting matrix and return it to the original position
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/compiler.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -274,7 +274,7 @@ This separation mirrors classical computer architecture but within a continuous,
 Taking the neural compilation idea further, we're developing a more principled graph-based hardware generation framework that offers significant improvements in flexibility and scale-invariance. This approach leverages a higher-level task representation abstraction where computational operations are modeled as a graph—nodes represent input and output regions while edges encode specific transformations between them.
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
         {% include figure.liquid path="assets/unca/hardware_meta_network.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
