@@ -50,7 +50,6 @@ toc:
       - name: MNIST Classifier emulation
       - name: Future directions - task composition and neural compiler
   - name: Conclusion
-
 ---
 
 <!-- <d-article> -->
@@ -78,6 +77,8 @@ The lack of discrete states and well-defined transitions makes it harder to enco
 
 Neural Cellular Automata (NCA) represent a paradigm shift by replacing hand-crafted rules with neural networks trained via gradient descent <d-cite key="nca"></d-cite>. Unlike traditional CA with explicitly handcrafted rules, NCA leverage differentiable architectures where the update rule is parameterized by a neural network and optimized end-to-end. This makes it possible to _learn_ complex behaviors from data, bypassing the need for manual rule design. NCAs have demonstrated success in tasks ranging from morphogenesis <d-cite key="nca"></d-cite> and classification <d-cite key="self_classifying"></d-cite> to solving reasoning challenges <d-cite key="cax"></d-cite> and growing neural networks <d-cite key="hypernca"></d-cite>. Given the Turing completeness of classical CA, NCA offer an exciting opportunity to search for computational rules through optimization, turning rule discovery into a machine learning problem. This shift is significant: the traditionally arduous task of hand-crafting rule sets that give rise to desired behaviors is now offloaded to the learning algorithm itself.
 
+It is important to note that the use of NCA in computational settings has precedent. Matrix copy and multiplication tasks were first implemented with NCA by Peter Whidden <d-cite key="comp_nca"></d-cite>, and our approach builds upon this foundational idea that NCA can serve as a continuous computational substrate. Very recently, researchers have demonstrated that NCA rules can be implemented using differentiable logic gates <d-cite key="difflogic_nca"></d-cite>, confirming the possibility of running self-organizing systems on standard digital hardware. Finally, in parallel to our work, a similar approach <d-cite key="engram_nca"></d-cite> was developed where cells augmented with "private memory tapes" were shown to exhibit stable, multi-task capabilities, further validating the potential of NCA as versatile computing platforms.
+
 Our work connects to analog computing and neuromorphic systems, which leverage biological principles like local computations <d-cite key="small_world,modular_brain,Bullmore2012TheEO"></d-cite> and co-located memory and processing to overcome the von Neumann bottleneck <d-cite key="bottlneck"></d-cite>. Neuromorphic systems implement these principles through distributed processing elements with local memory, using mixed-signal circuits that approximate neural dynamics while maintaining energy efficiency <d-cite key="neuromorphic_mead,neuromorphic_review,schuman2017surveyneuromorphiccomputingneural"></d-cite>. By exploring how systems with local interactions can implement universal computation, we aim to develop computing architectures that balance computational power with the efficiency characteristic of biological intelligence.
 
 In this work, we explore the potential of the Neural Cellular Automata paradigm to develop a continuous Universal Cellular Automata <d-cite key="universal_ca"></d-cite>, with the ambitious goal of inducing a universal Turing machine <d-cite key="universal_turing_machine"></d-cite> to emerge through gradient descent training. This has implications beyond academic curiosity, touching on fundamental questions about continuous dynamic systems' computational potential and the possibility of creating universal analog computers.
@@ -94,9 +95,9 @@ Our framework demonstrates neural cellular automata's capability to act as a gen
 
 - **Mutable state**: The main computational workspace where inputs are transformed into outputs. This state changes through time during task execution, governed by NCA rules.
 
-- **Immutable state**: A specialized hardware configuration that remains fixed during any single experiment. This state can be monolithic (uniform across the grid) or modular (composed of different specialized components).
+- **Immutable state**: A specialized hardware configuration that remains fixed during any single experiment. This hardware can itself be monolithic (trained as a block, the same shape as the entire grid), modular (created from different specialized components for each task specific instance), or even generated from a graph-based hypernetwork (see Future directions). This is learned across training but fixed in any duration of a single experiment / task instance.
 
-This separation enables a two-level optimization: at the global level, we train a general-purpose NCA rule to support diverse operations, while at the task-specific level, we optimize hardware configurations. The system adapts its dynamics using the local available hardware, similar to how different components on a motherboard enable different functions.
+This separation enables a two-level optimization: at the global level, we train a general-purpose NCA rule to support diverse operations, while at the task-specific level, we optimize hardware configurations. The system adapts its dynamics using the local available hardware, similar to how different components on a motherboard enable different functions, using the same underlying physical substrate.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
@@ -114,17 +115,25 @@ Our NCA models solve tasks directly within their mutable state through local cel
 
 2. **Update Function**: Utilizes the perception vector and local hardware vector to update each cell's state. We use an attention-based update module that calculates state updates by conditioning perceived information on the local hardware.
 
-The attention mechanism computes weights over multiple processing heads using the hardware input: $\alpha = \text{softmax}((I \cdot W_{\text{embed}}) / T)$. The perception vector is processed through parallel pathways, generating potential update vectors for each head. The final state update is computed as a weighted sum of these vectors: $\Delta S = \sum_{h=1}^{N} \alpha_h V_h$, with cells updated residually: $S_{t+1} = S_t + \Delta S$.
+The key innovation in our update function is an attention mechanism that allows each cell to selectively route its computation based on its local hardware. Here's how it works:
 
-This mechanism allows the NCA to dynamically adapt based on the local hardware, enabling diverse computations with the same underlying update rule.
+1. Each cell receives a perception vector $P$ (local spatial patterns) and a hardware vector $I$ (its immutable state).
+
+2. The hardware vector $I$ activates different "computational modes" through an attention mechanism: $\alpha = \text{softmax}((I \cdot W_{\text{embed}}) / T)$, where $W_{\text{embed}}$ is a learned embedding matrix and $T$ is a temperature parameter controlling the sharpness of the activation.
+
+3. The perception vector $P$ is simultaneously processed through $N$ parallel pathways (implemented as MLPs), producing potential update vectors $V_h$ for each pathway.
+
+4. The final state update is computed as a weighted mixture of these pathways: $\Delta S = \sum_{h=1}^{N} \alpha_h V_h$, with the cell's state updated residually: $S_{t+1} = S_t + \Delta S$.
+
+This design allows the NCA to adapt its behavior dynamically based on the local hardware—cells in input regions might activate different computational pathways than those in output regions or computational zones. The result is a flexible computational substrate where the same underlying rule can perform diverse operations depending on the hardware context.
 
 ### Hardware (Immutable State)
 
-We explored two approaches for designing specialized hardware configurations:
+We explored different approaches for designing specialized hardware configurations:
 
 #### Monolithic Hardware
 
-Our initial implementation used task-specific parameters with the same spatial dimension as the computational state. While successful and visually interpretable, this approach lacks generalizability across different spatial configurations and matrix sizes.
+Our initial implementation used task-specific parameters with the same spatial dimension as the computational state. While successful and visually interpretable, this approach lacks generalizability across different spatial configurations and matrix sizes: concretely the a new hardware configuration needs to be trained for each new matrix size and placement.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0" style="background-color: white; border-radius: 8px; padding: 10px; border: 1px solid #ddd;">
