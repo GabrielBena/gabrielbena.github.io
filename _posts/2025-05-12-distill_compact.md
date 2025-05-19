@@ -14,18 +14,17 @@ authors:
     affiliations:
       name: Imperial College London
   - name: Maxence Faldor
-#     url: ""  # Please add URL if available
-#     affiliations:
-#       name: Imperial College London
+  #     url: ""  # Please add URL if available
+  #     affiliations:
+  #       name: Imperial College London
   - name: Dan Goodman
-#     url: ""  # Please add URL if available
-#     affiliations:
-#       name: Imperial College London
+  #     url: ""  # Please add URL if available
+  #     affiliations:
+  #       name: Imperial College London
   - name: Antoine Cully
 #     url: ""  # Please add URL if available
 #     affiliations:
 #       name: Imperial College London
-
 
 # Essential for good BibTeX and citation display:
 slug: "bena2025unca" # e.g., bena2025unca - for the @article{key,...}
@@ -71,7 +70,7 @@ Cellular Automata (CA) represent a fascinating class of computational models tha
 
 Several discrete CA models, including Conway's Game of Life <d-cite key="cgol,life_turing_2016"></d-cite>, Rule 110 of Elementary Cellular Automata <d-cite key="wolfram,cook"></d-cite>, Langton's Ant <d-cite key="langton"></d-cite>, and Wireworld <d-cite key="wireworld"></d-cite>, have been mathematically proven Turing-complete, underscoring their remarkable power and expressiveness. These proofs establish that despite their simple construction, such systems can perform any computation that a traditional computer can. Beyond these formal demonstrations, researchers have constructed fully functional Turing machines within these CA, albeit through arduous efforts requiring meticulous design and substantial time investment. To ease this burden, evolutionary algorithms have been employed to automate CA rule discovery <d-cite key="mitchell,sapin"></d-cite>, though these approaches still target discrete systems and specific behaviors rather than general-purpose computation.
 
-In recent years, the development of continuous CA has bridged the gap between discrete models and the analog characteristics of the real world. Notable examples include Lenia <d-cite key="lenia"></d-cite> and SmoothLife <d-cite key="smoothlife"></d-cite>, which extend classic CA to simulate lifelike patterns with continuous dynamics. While evolutionary search <d-cite key="reinke_intrinsically_2020,leniabreeder"></d-cite> and gradient descent <d-cite key="hamon_discovering_2024"></d-cite> have been applied to optimize continuous CA patterns, a key open question persists: are these models capable of universal computation? While the answer is likely affirmative given their expressive potential, proving this remains elusive. 
+In recent years, the development of continuous CA has bridged the gap between discrete models and the analog characteristics of the real world. Notable examples include Lenia <d-cite key="lenia"></d-cite> and SmoothLife <d-cite key="smoothlife"></d-cite>, which extend classic CA to simulate lifelike patterns with continuous dynamics. While evolutionary search <d-cite key="reinke_intrinsically_2020,leniabreeder"></d-cite> and gradient descent <d-cite key="hamon_discovering_2024"></d-cite> have been applied to optimize continuous CA patterns, a key open question persists: are these models capable of universal computation? While the answer is likely affirmative given their expressive potential, proving this remains elusive.
 
 The lack of discrete states and well-defined transitions makes it harder to encode symbolic information reliably — slight perturbations can lead to significant divergence over time, undermining the stability required for computation. Moreover, continuous models often exhibit smooth, fuzzy dynamics that make it challenging to design modular components like wires, gates, or memory elements with predictable behavior. What was already a laborious task in discrete CA becomes more difficult, if not practically impossible, in the continuous domain, highlighting a fundamental challenge in building efficient analog computers.
 
@@ -168,6 +167,7 @@ These components are assembled for each task instance, balancing the scale-free 
 We implemented a flexible framework of matrix-based operations to train robust and versatile NCA models:
 
 **Matrix Operations:**
+
 - **Identity Mapping**: Moving a matrix to a different location
 - **Matrix Multiplication**: Computing C = A × B
 - **Transposition/Rotation**: Computing B = A^T or 90° rotation
@@ -257,6 +257,7 @@ The modular hardware approach enables the creation of out-of-distribution tasks 
 </div>
 
 This framework opens the path toward complex composite tasks created through sequential chaining of primitive operations. For example:
+
 1. Start with an input matrix and distribute copies to corner positions
 2. Replace the hardware configuration to redefine these targets as inputs, then perform matrix multiplication toward a third corner
 3. Update the hardware again to rotate the resulting matrix and return it to the original position
@@ -273,6 +274,7 @@ This framework opens the path toward complex composite tasks created through seq
 While such sequences may appear simple, they demonstrate a critical capability: the NCA can execute complex algorithmic workflows through sequential hardware reconfiguration. This composite task chaining highlights the importance of stability in achieving composable computations.
 
 We propose a dual-timestep approach to neural compilation:
+
 - At the neuronal timestep, the NCA's mutable state evolves according to update rules
 - At the compiler timestep, hardware parameters are reconfigured to guide high-level procedural steps
 
