@@ -315,7 +315,13 @@ Looking forward, we believe this work lays the groundwork for transformative adv
 
 <!-- </d-article> -->
 
-<div class="distill-appendix">
+<d-appendix style="display: block; max-width: 740px; margin: 2em auto;">
+  <h3>Author Contributions</h3>
+  <p>Gabriel Béna and Maxence Faldor contributed equally to this work. Maxence Faldor initiated the project, conceived its central ideas, including the concept of state and immutable state for hardware representation. He also developed the initial software library and experimental design. Gabriel Béna provided crucial feedback on these foundational ideas, developed the tasks setup, led the development of the compiler and the Graph Neural Network (GNN) components, conducted the extensive experiments, and was the primary author of the project website. Dan Goodman and Antoine Cully supervised the project, offering guidance, insightful discussions, and contributing to brainstorming sessions.</p>
+
+  <h3>Acknowledgements</h3>
+  <p>We thank Arthur Braida for his insightful discussions and feedback, mainly about computing with continuous, analog substrates.</p>
+
   <h3>Citation</h3>
   <p>For attribution in academic contexts, please cite this work as</p>
   <pre><code>Béna, et al., "A Path to Universal Neural Cellular Automata", Genetic and Evolutionary Computation Conference (GECCO '25 Companion), 2025.</code></pre>
@@ -328,4 +334,4 @@ Looking forward, we believe this work lays the groundwork for transformative adv
     year    = {2025},
     doi     = {doi.org/10.1145/3712255.373431}
   }</code></pre>
-</div>
+</d-appendix>
