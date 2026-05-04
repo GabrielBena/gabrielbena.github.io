@@ -2136,7 +2136,7 @@ d-appendix > distill-appendix {
 }
 
 .citation {
-  color: hsla(206, 90%, 20%, 0.7);
+  color: var(--distill-citation-color, hsla(206, 90%, 20%, 0.7));
 }
 
 .citation-number {
@@ -2144,7 +2144,7 @@ d-appendix > distill-appendix {
   white-space: nowrap;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", Helvetica, sans-serif;
   font-size: 75%;
-  color: hsla(206, 90%, 20%, 0.7);
+  color: var(--distill-citation-color, hsla(206, 90%, 20%, 0.7));
   display: inline-block;
   line-height: 1.1em;
   text-align: center;
@@ -4277,7 +4277,7 @@ sup {
 }
 
 span {
-  color: hsla(206, 90%, 20%, 0.7);
+  color: var(--distill-citation-color, hsla(206, 90%, 20%, 0.7));
   cursor: default;
 }
 
@@ -4446,9 +4446,9 @@ d-footnote-list a.footnote-backlink {
   top: 0;
   left: 0;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(250, 250, 250, 0.95);
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--distill-hover-border-color, rgba(0, 0, 0, 0.1));
+  background-color: var(--distill-hover-bg-color, rgba(250, 250, 250, 0.95));
+  box-shadow: 0 0 7px var(--distill-hover-shadow-color, rgba(0, 0, 0, 0.1));
   border-radius: 4px;
   box-sizing: border-box;
 

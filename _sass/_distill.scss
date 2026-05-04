@@ -2,6 +2,28 @@
  * Style overrides for distill blog posts.
  ******************************************************************************/
 
+// Citation/footnote theming.
+// These CSS custom properties are read inside the shadow DOMs of <d-cite>,
+// <d-footnote>, and <d-hover-box> (see assets/js/distillpub/template.v2.js).
+// Custom properties inherit across shadow boundaries, so defining them on
+// :root is enough to reach the shadow. The popup text color itself is already
+// inherited from the surrounding d-article via --global-text-color, so we
+// only need to theme the panel background/border/shadow plus the inline
+// citation/footnote marker color.
+:root {
+  --distill-hover-bg-color: rgba(250, 250, 250, 0.97);
+  --distill-hover-border-color: rgba(0, 0, 0, 0.1);
+  --distill-hover-shadow-color: rgba(0, 0, 0, 0.1);
+  --distill-citation-color: hsla(206, 90%, 20%, 0.7);
+}
+
+html[data-theme="dark"] {
+  --distill-hover-bg-color: #{$grey-900};
+  --distill-hover-border-color: #424246;
+  --distill-hover-shadow-color: rgba(0, 0, 0, 0.6);
+  --distill-citation-color: #{$light-cyan-color};
+}
+
 d-byline {
   border-top-color: var(--global-divider-color) !important;
 }
