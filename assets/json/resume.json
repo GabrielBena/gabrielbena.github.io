@@ -1,17 +1,17 @@
 {
   "basics": {
     "name": "Gabriel Béna",
-    "label": "Neuromorphic Researcher",
+    "label": "Postdoctoral Researcher in Neuromorphic Computing",
     "image": "",
-    "email": "g.bena21@imperial.ac.uk",
+    "email": "bena@ini.uzh.ch",
     "phone": "",
     "url": "",
-    "summary": "PhD candidate in neuromorphic computing at Imperial College London and Neuromorphic Researcher at SpiNNCloud. Passionate and driven, with strong capabilities and interest in programming and natural sciences.",
+    "summary": "Postdoctoral researcher at the Institute of Neuroinformatics (INI), Zurich, working at the intersection of computational neuroscience, machine learning, and neuromorphic engineering. Interested in how complex, adaptive computations emerge from simple local parts — through modularity, self-organisation, and the structure–function relationship in neural networks.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "London",
-      "countryCode": "UK",
+      "city": "Zurich",
+      "countryCode": "CH",
       "region": ""
     },
     "profiles": [
@@ -29,36 +29,50 @@
   },
   "work": [
     {
-      "name": "SpiNNcloud",
-      "position": "Neuromorphic Researcher & Developer",
-      "url": "",
-      "startDate": "2024-10-01",
+      "name": "Institute of Neuroinformatics (INI), UZH / ETH Zurich",
+      "position": "Postdoctoral Researcher",
+      "url": "https://www.ini.uzh.ch/en/research/groups/EIS.html",
+      "startDate": "2026-05-01",
       "endDate": "",
-      "summary": "Freelance work based in Dresden, Germany focusing on neuromorphic computing applications and software development.",
+      "summary": "Postdoc in Melika Payvand's lab, exploring how spatial and energy constraints in memristive neuromorphic hardware shape the emergence of modular, compositional computation.",
       "highlights": [
-        "Designing and deploying deep SNNs on neuromorphic chips",
-        "Utilizing hybrid approaches to leverage the best of conventional and neuromorphic computing",
-        "Tackling multiple optimisation and physics problems as neuromorphic applications",
-        "Active software development and improvement of py-spinnaker2"
+        "Spatially-embedded recurrent networks on memristor-based neuromorphic substrates",
+        "Energy- and locality-driven emergence of structural and functional modularity",
+        "Compositional learning and generalisation under physical hardware constraints"
+      ]
+    },
+    {
+      "name": "SpiNNcloud Systems",
+      "position": "Neuromorphic Researcher & Developer",
+      "url": "https://spinncloud.com/",
+      "startDate": "2023-10-01",
+      "endDate": "2025-11-01",
+      "summary": "Part-time researcher based in Dresden, Germany, working on neuromorphic computing applications and SNN software for the SpiNNaker2 platform.",
+      "highlights": [
+        "Designed and deployed deep SNNs on the SpiNNaker2 neuromorphic chip",
+        "Built hybrid pipelines combining conventional and neuromorphic compute",
+        "Tackled optimisation and physics problems as neuromorphic applications",
+        "Active developer of the py-spinnaker2 software stack"
       ]
     },
     {
       "name": "Imperial College London",
       "position": "PhD Candidate",
-      "url": "",
+      "url": "https://neural-reckoning.org/",
       "startDate": "2021-01-01",
-      "endDate": "",
-      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, focusing on Spiking Neural Networks and neuromorphic computing.",
+      "endDate": "2026-03-01",
+      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, on the structure–function relationship in neural networks and on self-organisation as a route to robust, distributed computation.",
       "highlights": [
-        "Study Spiking Neural Networks (SNNs) and uncover principles underlying the spike-based computational paradigm",
-        "Study the relationship between structure and function in NNs, especially in modular & multimodal architectures",
-        "Leverage these insights to advance neuromorphic computing"
+        "Showed that structural modularity alone does not guarantee functional specialisation: the structure–function link emerges only under specific resource constraints and input statistics (Nature Communications, 2024)",
+        "Trained continuous Neural Cellular Automata as a universal computational medium, demonstrating learnable matrix-algebra primitives and MNIST-classifier emulation directly within the cellular state",
+        "Introduced Self-Organising Digital Circuits: a Topology-Masked Transformer that grows and self-repairs Boolean logic circuits via purely local message passing, with no global backpropagation at deployment",
+        "Co-developed the SNN software stack for SpiNNaker2 and contributed to multimodal-integration studies in Spiking Neural Networks"
       ]
     },
     {
       "name": "Prophesee",
       "position": "ML / Neuromorphic Intern",
-      "url": "",
+      "url": "https://www.prophesee.ai/",
       "startDate": "2020-06-01",
       "endDate": "2020-12-01",
       "summary": "Internship in Paris, France working on event-based cameras and neural networks.",
