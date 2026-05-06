@@ -19,7 +19,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hey! I'm Gabriel — a postdoc at the Institute of Neuroinformatics in Zurich (INI), in [Melika Payvand's lab](https://www.ini.uzh.ch/en/research/groups/EIS.html), and until recently a part-time neuromorphic researcher at [SpiNNcloud Systems](https://spinncloud.com/). I bounce around between computational neuroscience, machine learning, and neuromorphic engineering, mostly chasing one question: **how do complex, adaptive computations emerge from simple, local parts?**
+Hey! I'm Gabriel — a postdoc at the Institute of Neuroinformatics in Zurich (INI), in [Melika Payvand's lab](https://www.ini.uzh.ch/en/research/groups/EIS.html), and until recently a part-time neuromorphic researcher at [SpiNNcloud Systems](https://spinncloud.com/). I bounce around between computational neuroscience, machine learning, and neuromorphic engineering, mostly chasing one question: **how can a complex, adaptive and generally interesting intelligence emerge from constrained computational substrates?**
 
 A lot of my work pokes at the *structure–function* relationship in neural networks. Turns out [structural modularity alone doesn't buy you functional specialisation](https://www.nature.com/articles/s41467-024-55188-9) — you need the right resource constraints and the right kind of input statistics for the two to actually line up. I'm now extending this on physical substrates, looking at how spatial and energy constraints, particularly in memristive neuromorphic hardware, can naturally push networks toward modular, compositional solutions.
 
