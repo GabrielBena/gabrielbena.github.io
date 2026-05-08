@@ -46,6 +46,6 @@ scholar_userid: cFKO_vQAAAAJ&hl # your Google Scholar ID
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://www.ini.uzh.ch/dam/jcr:4d6b94f6-129b-4cdc-873e-25e57bf93eb2/image3.png # can be png, svg, jpg
+  logo: https://avatars.githubusercontent.com/u/126698737?s=200&v=4 # can be png, svg, jpg
   title: EIS Group in the Institute of Neuroinformatics
   url: https://www.ini.uzh.ch/en/research/groups/EIS.html
