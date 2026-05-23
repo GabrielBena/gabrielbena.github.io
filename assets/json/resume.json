@@ -61,7 +61,7 @@
       "url": "https://neural-reckoning.org/",
       "startDate": "2021-01-01",
       "endDate": "2026-03-01",
-      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, on the structure–function relationship in neural networks and on self-organisation as a route to robust, distributed computation.",
+      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, on the structure–function relationship in neural networks and on self-organisation as a route to robust, distributed computation. Full thesis: <a href=\"/phd/\"><em>Physical Constraints and Functional Demands shape Modular Neuromorphic Intelligence</em></a> (<a href=\"https://doi.org/10.25560/128990\" target=\"_blank\" rel=\"noopener\">doi:10.25560/128990</a>).",
       "highlights": [
         "Showed that structural modularity alone does not guarantee functional specialisation: the structure–function link emerges only under specific resource constraints and input statistics (Nature Communications, 2024)",
         "Trained continuous Neural Cellular Automata as a universal computational medium, demonstrating learnable matrix-algebra primitives and MNIST-classifier emulation directly within the cellular state",

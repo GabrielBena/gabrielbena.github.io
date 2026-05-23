@@ -322,6 +322,9 @@ Looking forward, we believe this work lays the groundwork for transformative adv
   <h3>Acknowledgements</h3>
   <p>We thank Arthur Braida for his insightful discussions and feedback, mainly about computing with continuous, analog substrates.</p>
 
+  <h3>PhD Thesis</h3>
+  <p>This work forms part of Gabriel Béna's PhD thesis, <a href="{{ '/phd/' | relative_url }}"><em>Physical Constraints and Functional Demands shape Modular Neuromorphic Intelligence</em></a> (Imperial College London, 2026; <a href="https://doi.org/10.25560/128990" target="_blank" rel="noopener noreferrer">doi:10.25560/128990</a>).</p>
+
   <h3>Citation</h3>
   <p>For attribution in academic contexts, please cite this work as</p>
   <pre><code>Béna, et al., "A Path to Universal Neural Cellular Automata", Genetic and Evolutionary Computation Conference (GECCO '25 Companion), 2025.</code></pre>
