@@ -90,11 +90,11 @@ _styles: >
 
 My doctoral thesis, defended at Imperial College London (Neural Reckoning Group, supervised by Prof. Dan Goodman), explores **modularity and self-organisation in neural networks**.
 
-The first half of the thesis investigates the *structure–function relationship* in neural networks: how structural modularity, resource constraints, and input statistics jointly shape functional specialisation, and how compositional learning can be grounded in physically embedded, energy-constrained substrates such as memristive neuromorphic hardware.
+The first half of the thesis investigates the _structure–function relationship_ in neural networks: how structural modularity, resource constraints, and input statistics jointly shape functional specialisation, and how compositional learning can be grounded in physically embedded, energy-constrained substrates such as memristive neuromorphic hardware.
 
-The second half steps a level deeper, into the foundations of *self-organisation* itself. It explores how continuous Neural Cellular Automata can be sculpted into a [universal computational medium]({{ '/blog/2025/bena2025unca/' | relative_url }}) via gradient descent, and how a closely related local-message-passing policy can grow and self-repair [digital Boolean circuits]({{ '/blog/2026/bena2026sodc/' | relative_url }}) — bridging biological resilience and reconfigurable hardware.
+The second half steps a level deeper, into the foundations of _self-organisation_ itself. It explores how continuous Neural Cellular Automata can be sculpted into a [universal computational medium]({{ '/blog/2025/bena2025unca/' | relative_url }}) via gradient descent, and how a closely related local-message-passing policy can grow and self-repair [digital Boolean circuits]({{ '/blog/2026/bena2026sodc/' | relative_url }}) — bridging biological resilience and reconfigurable hardware.
 
-Together, these chapters frame modularity less as a fixed architectural property and more as an *emergent phenomenon* arising from the tension between constraints and goals, between local rules and global behaviour.
+Together, these chapters frame modularity less as a fixed architectural property and more as an _emergent phenomenon_ arising from the tension between constraints and goals, between local rules and global behaviour.
 
 <div class="pdf-toolbar">
   <a class="btn btn-sm btn-outline-secondary"
@@ -142,13 +142,13 @@ Together, these chapters frame modularity less as a fixed architectural property
 
 {% highlight bibtex %}
 @phdthesis{bena2026modular,
-  title   = {Physical constraints and functional demands shape modular neuromorphic intelligence},
-  author  = {B{\'e}na, Gabriel},
-  school  = {Imperial College London},
-  year    = {2026},
-  month   = mar,
-  doi     = {10.25560/128990},
-  url     = {https://hdl.handle.net/10044/1/128990}
+title = {Physical constraints and functional demands shape modular neuromorphic intelligence},
+author = {B{\'e}na, Gabriel},
+school = {Imperial College London},
+year = {2026},
+month = mar,
+doi = {10.25560/128990},
+url = {https://hdl.handle.net/10044/1/128990}
 }
 {% endhighlight %}
 
