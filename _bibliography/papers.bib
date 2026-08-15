@@ -82,19 +82,22 @@ bibtex_show={true},
 }
 
 
-@article{ghosh_spiking_2024,
+@article{ghosh_interaural_2025,
   bibtex_show={true},
-	title = {Spiking neural network models of sound localisation via a massively collaborative process},
-	copyright = {© 2024, Posted by Cold Spring Harbor Laboratory. This pre-print is available under a Creative Commons License (Attribution 4.0 International), CC BY 4.0, as described at http://creativecommons.org/licenses/by/4.0/},
-	url = {https://www.biorxiv.org/content/10.1101/2024.07.19.604252v1},
-	doi = {10.1101/2024.07.19.604252},
+	title = {Spiking neural network models of interaural time difference extraction via a massively collaborative process},
+	journal = {eNeuro},
+	volume = {12},
+	number = {7},
+	pages = {ENEURO.0383-24.2025},
+	publisher = {Society for Neuroscience},
+	url = {https://www.eneuro.org/content/12/7/ENEURO.0383-24.2025},
+	doi = {10.1523/ENEURO.0383-24.2025},
 	abstract = {Neuroscientists are increasingly initiating large-scale collaborations which bring together tens to hundreds of researchers. However, while these projects represent a step-change in scale, they retain a traditional structure with centralised funding, participating laboratories and data sharing on publication. Inspired by an open-source project in pure mathematics, we set out to test the feasibility of an alternative structure by running a grassroots, massively collaborative project in computational neuroscience. To do so, we launched a public Git repository, with code for training spiking neural networks to solve a sound localisation task via surrogate gradient descent. We then invited anyone, anywhere to use this code as a springboard for exploring questions of interest to them, and encouraged participants to share their work both asynchro-nously through Git and synchronously at monthly online workshops. At a scientific level, our work investigated how a range of biologically-relevant parameters, from time delays to mem-brane time constants and levels of inhibition, could impact sound localisation in networks of spiking units. At a more macro-level, our project brought together 31 researchers from multiple countries, provided hands-on research experience to early career participants, and opportunities for supervision and teaching to later career participants. Looking ahead, our project provides a glimpse of what open, collaborative science could look like and provides a necessary, tentative step towards it.},
 	language = {en},
 	urldate = {2025-05-14},
-	publisher = {bioRxiv},
 	author = {Ghosh, Marcus and Habashy, Karim G. and Santis, Francesco De and Fiers, Tomas and Erçelik, Dilay Fidan and Mészáros, Balázs and Friedenberger, Zachary and Béna, Gabriel and Hong, Mingxuan and Abubacar, Umar and Byrne, Rory T. and Riquelme, Juan Luis and Liu, Yuhan Helena and Aizenbud, Ido and Bicknell, Brendan A. and Bormuth, Volker and Antonietti, Alberto and Goodman, Dan F. M.},
-	month = jul,
-	year = {2024},
+	month = jun,
+	year = {2025},
   preview={comob.png}
 }
 
@@ -104,9 +107,23 @@ bibtex_show={true},
     author  = {Béna, Gabriel and Faldor, Maxence and Goodman, Dan and Cully, Antoine},
     journal = {Genetic and Evolutionary Computation Conference (GECCO '25 Companion)},
     year    = {2025},
-    doi     = {https://doi.org/10.48550/arXiv.2505.13058},
+    doi     = {10.1145/3712255.3734310},
+    url     = {https://doi.org/10.1145/3712255.3734310},
+	selected={true},
 	preview={unca.png},
 	abstract={
 			Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives — such as matrix multiplication and transposition — culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning.
+			}
+  }
+@inproceedings{bena2026sodc,
+	bibtex_show={true},
+    title     = {Self-Organising Digital Circuits},
+    author    = {Barylli, Marcello and Béna, Gabriel and Mordvintsev, Alexander and Nisioti, Eleni and Risi, Sebastian},
+    booktitle = {Artificial Life Conference (ALIFE 2026)},
+    year      = {2026},
+    note      = {In press. Marcello Barylli and Gabriel Béna contributed equally.},
+	selected={true},
+	abstract={
+			Extending the Neural Cellular Automata paradigm from pattern formation on grids to functional logic generation and self-repair on arbitrary graphs. A single shared, local, learned rule assembles, persists and repairs a boolean circuit through purely local message passing, forward-only and with no global backpropagation at deployment, on randomly wired circuits. After damage the system recovers by finding a different working circuit rather than by restoring the original one.
 			}
   }

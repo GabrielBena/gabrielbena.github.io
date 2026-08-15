@@ -3,7 +3,7 @@
     "name": "Gabriel Béna",
     "label": "Postdoctoral Researcher in Neuromorphic Computing",
     "image": "",
-    "email": "bena@ini.uzh.ch",
+    "email": "gabriel.bena@uzh.ch",
     "phone": "",
     "url": "",
     "summary": "Postdoctoral researcher at the Institute of Neuroinformatics (INI), Zurich, working at the intersection of computational neuroscience, machine learning, and neuromorphic engineering. Interested in how complex, adaptive computations emerge from simple local parts — through modularity, self-organisation, and the structure–function relationship in neural networks.",
@@ -43,25 +43,37 @@
     },
     {
       "name": "SpiNNcloud Systems",
-      "position": "Neuromorphic Researcher & Developer",
+      "position": "Neuromorphic Researcher & Developer (part-time)",
       "url": "https://spinncloud.com/",
-      "startDate": "2023-10-01",
+      "startDate": "2024-10-01",
       "endDate": "2025-11-01",
-      "summary": "Part-time researcher based in Dresden, Germany, working on neuromorphic computing applications and SNN software for the SpiNNaker2 platform.",
+      "summary": "Continued part-time from Dresden, Germany, alongside completing the doctorate.",
       "highlights": [
-        "Designed and deployed deep SNNs on the SpiNNaker2 neuromorphic chip",
         "Built hybrid pipelines combining conventional and neuromorphic compute",
         "Tackled optimisation and physics problems as neuromorphic applications",
         "Active developer of the py-spinnaker2 software stack"
       ]
     },
     {
+      "name": "SpiNNcloud Systems",
+      "position": "Neuromorphic Researcher & Developer (full-time)",
+      "url": "https://spinncloud.com/",
+      "startDate": "2023-09-01",
+      "endDate": "2024-10-01",
+      "summary": "Full-time researcher in Dresden, Germany, taken as a one-year interruption of the PhD, working on neuromorphic computing applications and SNN software for the SpiNNaker2 platform.",
+      "highlights": [
+        "Designed and deployed deep SNNs on the SpiNNaker2 neuromorphic chip",
+        "First implementation of event-based backpropagation on SpiNNaker2",
+        "Core developer of the py-spinnaker2 software stack"
+      ]
+    },
+    {
       "name": "Imperial College London",
       "position": "PhD Candidate",
       "url": "https://neural-reckoning.org/",
-      "startDate": "2021-01-01",
-      "endDate": "2026-03-01",
-      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, on the structure–function relationship in neural networks and on self-organisation as a route to robust, distributed computation. Full thesis: <a href=\"/phd/\"><em>Physical Constraints and Functional Demands shape Modular Neuromorphic Intelligence</em></a> (<a href=\"https://doi.org/10.25560/128990\" target=\"_blank\" rel=\"noopener\">doi:10.25560/128990</a>).",
+      "startDate": "2021-01-07",
+      "endDate": "2026-03-27",
+      "summary": "PhD in the Neural Reckoning Group under the supervision of Dan Goodman, on the structure–function relationship in neural networks and on self-organisation as a route to robust, distributed computation. Interrupted for one year (09/2023 – 10/2024) for a full-time research position at SpiNNcloud Systems. Viva voce 27/03/2026. Full thesis: <a href=\"/phd/\"><em>Physical Constraints and Functional Demands shape Modular Neuromorphic Intelligence</em></a> (<a href=\"https://doi.org/10.25560/128990\" target=\"_blank\" rel=\"noopener\">doi:10.25560/128990</a>).",
       "highlights": [
         "Showed that structural modularity alone does not guarantee functional specialisation: the structure–function link emerges only under specific resource constraints and input statistics (Nature Communications, 2024)",
         "Trained continuous Neural Cellular Automata as a universal computational medium, demonstrating learnable matrix-algebra primitives and MNIST-classifier emulation directly within the cellular state",
@@ -86,7 +98,7 @@
   "volunteer": [],
   "education": [
     {
-      "institution": "Université Paul Sabathier",
+      "institution": "Université Paul Sabatier (Toulouse III)",
       "location": "Toulouse, France",
       "url": "",
       "area": "Operational Research",
@@ -108,7 +120,7 @@
       "courses": ["Data Science", "Decision Science", "Machine Learning", "Space Systems Operation", "Space Systems Conception"]
     },
     {
-      "institution": "Lycées Henri IV",
+      "institution": "Lycée Henri-IV",
       "location": "Paris, France",
       "url": "",
       "area": "MP Preparatory Classes",
