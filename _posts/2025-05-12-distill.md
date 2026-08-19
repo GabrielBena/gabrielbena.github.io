@@ -2,6 +2,7 @@
 layout: distill
 title: A Path to Universal Neural Cellular Automata
 description: Exploring how neural cellular automata can develop continuous universal computation through training by gradient descent
+og_image: /assets/unca/preview.png
 tags: neural-cellular-automata universal-computation
 giscus_comments: true
 date: 2025-05-12
