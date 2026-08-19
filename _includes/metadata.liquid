@@ -59,7 +59,7 @@
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
   <meta
     property="og:title"
-    content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}"
+    content="{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title and page.title != title %}{{ title }} | {{ page.title }}{% elsif page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}"
   >
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
