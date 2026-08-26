@@ -53,6 +53,7 @@ Using Docker to install Jekyll and Ruby dependencies is the easiest way.
 You need to take the following steps to get `al-folio` up and running on your local machine:
 
 - First, install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/).
+  > On native Linux (including WSL), your user also needs to be in the `docker` group, or every `docker`/`docker-compose` command fails with `permission denied ... docker.sock` even though the daemon itself is running fine: `sudo usermod -aG docker "$USER"`, then open a **new terminal** (group changes only apply to new login sessions).
 - Finally, run the following command that will pull the latest pre-built image from DockerHub and will run your website.
 
 ```bash
@@ -79,6 +80,8 @@ $ docker compose up --build
 > If you want to update jekyll, install new ruby packages, etc., all you have to do is build the image again using `--force-recreate` argument at the end of the previous command! It will download Ruby and Jekyll and install all Ruby packages again from scratch.
 
 If you want to use a specific docker version, you can do so by changing `latest` tag to `your_version` in `docker-compose.yaml`. For example, you might have created your website on `v0.10.0` and you want to stick with that.
+
+> This repo's `Dockerfile`/`docker-compose.yml` build the container as a non-root user matching the host UID/GID (see the `build.args` in `docker-compose.yml`), so files written into the bind-mounted repo (`.jekyll-cache/`, `_site/`) come out owned by you, not `root`. Copying this setup to a different machine? Regenerate those `args` for that machine's own user via `id -g` / `id -gn` / `id -u` / `echo $USER`.
 
 ### Have Bugs on Docker Image?
 
