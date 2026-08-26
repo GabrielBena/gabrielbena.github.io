@@ -26,10 +26,12 @@
                 "author": "{{ author.name }}",
                 "authorURL": "{{ author.url }}",
                 "affiliations": [
+                  {% for affiliation in author.affiliations %}
                   {
-                    "name": "{{ author.affiliations.name }}",
-                    "url": "{{ author.affiliations.url }}"
-                  }
+                    "name": "{{ affiliation.name }}",
+                    "url": "{{ affiliation.url }}"
+                  }{% if forloop.last == false %},{% endif %}
+                  {% endfor %}
                 ]
               }{% if forloop.last == false %},{% endif %}
               {% endfor %}

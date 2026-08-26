@@ -247,3 +247,36 @@
     }
   </script>
 {% endif %}
+
+{% if page.citation_metadata %}
+  <!-- Google Scholar citation metadata: https://scholar.google.com/intl/en/scholar/inclusion.html -->
+  <meta name="citation_title" content="{{ page.title }}">
+  {% for author in page.authors %}
+    {% assign clean_name = author.name | regex_replace: '[*∗†‡§¶‖&^]', '' | strip %}
+    {% assign name_parts = clean_name | split: ' ' %}
+    {% assign last_name = name_parts | last %}
+    {% assign first_names_count = name_parts.size | minus: 1 %}
+    {% assign first_names = name_parts | slice: 0, first_names_count | join: ' ' %}
+    <meta name="citation_author" content="{{ last_name }}, {{ first_names }}">
+    {% for affiliation in author.affiliations %}
+      <meta name="citation_author_institution" content="{{ affiliation.name }}">
+    {% endfor %}
+  {% endfor %}
+  <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  <meta name="citation_online_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  {% if page.doi %}
+    <meta name="citation_doi" content="{{ page.doi }}">
+  {% endif %}
+  {% if page.citation_conference_title %}
+    <meta name="citation_conference_title" content="{{ page.citation_conference_title }}">
+  {% endif %}
+  {% if page.citation_volume %}
+    <meta name="citation_volume" content="{{ page.citation_volume }}">
+  {% endif %}
+  {% if page.citation_publisher %}
+    <meta name="citation_publisher" content="{{ page.citation_publisher }}">
+  {% endif %}
+  {% capture citation_url %}{{ page.url | replace:'index.html','' | absolute_url }}{% endcapture %}
+  <meta name="citation_fulltext_html_url" content="{{ citation_url }}">
+  <meta name="citation_abstract_html_url" content="{{ citation_url }}">
+{% endif %}

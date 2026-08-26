@@ -110,3 +110,20 @@ bibtex_show={true},
 			Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives — such as matrix multiplication and transposition — culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning.
 			}
   }
+
+
+@inproceedings{barylli2026sodc,
+  bibtex_show={true},
+  title={Self-Organising Digital Circuits},
+  abstract={Fault tolerance in classical computing has traditionally relied on static strategies like hardware redundancy and error-correcting codes. Biological systems, in contrast, exhibit adaptive plasticity, maintaining function through dynamic re-organisation around damage. Inspired by this principle, we introduce Self-Organising Digital Circuits, extending the Neural Cellular Automata (NCA) paradigm from pattern formation on grids to functional logic generation and maintenance on arbitrary graphs. Our architecture employs a topology-masked Transformer as a decentralised policy that operates directly on a computational substrate, configuring the Lookup Tables (LUT) of Boolean gates. Unlike standard NCA which regenerate a fixed target state, this policy navigates the Boolean search space to satisfy a computational task. We demonstrate that it can self-assemble functional circuits from scratch and, crucially, rapidly re-route logic around permanent, previously unseen hardware faults by exploiting degeneracies of the Boolean solution space. For soft errors, the policy achieves perfect recovery from damage sizes far exceeding training conditions. This work bridges the principles of biological self-organisation with the practical domain of digital hardware.},
+  author={Barylli, Marcello and Béna, Gabriel and Mordvintsev, Alexander and Nisioti, Eleni and Risi, Sebastian},
+  booktitle={Proceedings of the 2026 Artificial Life Conference (ALIFE 2026)},
+  year={2026},
+  publisher={MIT Press},
+  doi={10.1162/ISAL.a.967},
+  arxiv={2608.02606},
+  selected={true},
+  preview={sodc.png},
+  blog={/blog/2026/sodc/},
+  code={https://github.com/GabrielBena/boolean_nca_cc/tree/gabi}
+}

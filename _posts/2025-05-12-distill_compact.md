@@ -13,7 +13,7 @@ authors:
   - name: Gabriel Béna
     url: "https://gabrielbena.github.io/"
     affiliations:
-      name: Imperial College London
+      - name: Imperial College London
   - name: Maxence Faldor
   #     url: ""  # Please add URL if available
   #     affiliations:
@@ -32,6 +32,9 @@ slug: "bena2025unca" # e.g., bena2025unca - for the @article{key,...}
 journal: "Genetic and Evolutionary Computation Conference (GECCO '25 Companion)"
 doi: "10.1145/3712255.3734310" # e.g., 10.23915/distill.00000
 # url: "https://your.article/full-url" # Link to the article itself
+citation_metadata: true
+citation_conference_title: "Genetic and Evolutionary Computation Conference (GECCO '25 Companion)"
+citation_publisher: "ACM"
 
 bibliography: unca.bib
 
