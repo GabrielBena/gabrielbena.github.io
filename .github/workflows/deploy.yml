@@ -103,3 +103,12 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+      - name: Trigger SODC mirror rebuild
+        if: github.event_name != 'pull_request'
+        continue-on-error: true # don't fail this deploy if the mirror secret/repo isn't set up
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.SODC_MIRROR_DISPATCH_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/self-organising-circuits/self-organising-circuits.github.io/dispatches \
+            -d '{"event_type":"sodc-source-updated"}'
